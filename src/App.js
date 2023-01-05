@@ -4,9 +4,6 @@ import db from './firestore';
 import logo from './Mr-Beast-Logo.png'
 import audio from './audio.mp3'
 
-// const docRef = doc(db, "count", "count");
-// const docSnap = await getDoc(docRef);
-// console.log(docSnap)
 function App() {
   const [count, setCount] = useState([]);
   const docRef= db.collection("count").doc("count")
@@ -29,8 +26,6 @@ function App() {
       fetchCount();
     }, [])
 
-
-    console.log(count)
   return (
 
     // <Todo/>
@@ -43,7 +38,6 @@ function App() {
       >
       </img>
       
-
       <div className='wrapper'><button onClick={() => addCount()}>Logan Paul</button></div>
 
     </div>
